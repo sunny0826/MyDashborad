@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>MyDaboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        
+        <!--<link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">-->
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontAwesome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/hero-slider.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+
+        <link href="{% static 'dist/lib/dashboard/zui.dashboard.min.css' %}" rel="stylesheet">
+
+        <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand scroll-top"><em>M</em>ydashboard</a>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" class="scroll-top">Home</a></li>
+                        <li><a href="#" class="scroll-link" data-id="about">Disk&RAM</a></li>
+                        <li><a href="#" class="scroll-link" data-id="portfolio">BasicInfo</a></li>
+                        <li><a href="#" class="scroll-link" data-id="deploy">Deploy</a></li>
+                        <li><a href="#" class="scroll-link" data-id="contact-us">CONTACT me</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <div class="parallax-content baner-content" id="home">
+        <div class="container">
+            <div class="text-content">
+                <h2>Please <span>start</span> your <em>show</em></h2>
+                <p>This is my first project of Django. Enhance my ability through this project.</p>
+                <div class="primary-white-button">
+                    <a href="#" class="scroll-link" data-id="about">Let's Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="about" class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div class="">
+                            <img src="{% static 'img/Control_Panel.ico' %}" alt="">
+                        </div>
+                        <h4>Disk Information</h4>
+                        <div class="line-dec"></div>
+                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
+                        <div class="primary-blue-button">
+                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div class="">
+                            <img src="{% static 'img/C_drive.ico' %}" alt="">
+                        </div>
+                        <h4>C Drive Information</h4>
+                        <div class="line-dec"></div>
+                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
+                        <div class="primary-blue-button">
+                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div class="">
+                            <img src="{% static 'img/D_drive.ico' %}" alt="">
+                        </div>
+                        <h4>D drive information</h4>
+                        <div class="line-dec"></div>
+                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
+                        <div class="primary-blue-button">
+                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <div class="">
+                            <img src="{% static 'img/Rocketdock.ico' %}" alt="">
+                        </div>
+                        <h4>Memory Information</h4>
+                        <div class="line-dec"></div>
+                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
+                        <div class="primary-blue-button">
+                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>-->
+
+    <section id="portfolio">
+        <div class="content-wrapper">
+            <div class="inner-container container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="section-heading">
+                            <h4>Basic Info</h4>
+                            <div class="line-dec"></div>
+                            <p>Some Useful Information.</p>
+                            <div class="filter-categories">
+                                <ul class="project-filter">
+                                    <li class="filter" data-filter="all"><span>About</span></li>
+                                    <li class="filter" data-filter="branding" onclick="sinaRank(1)"><span>sina  Rank</span></li>
+                                    <li class="filter" data-filter="graphic" onclick="bilibili()"><span>BiliBili List</span></li>
+                                    <li class="filter" data-filter="nature"><span>Nature</span></li>
+                                    <li class="filter" data-filter="animation"><span>Animation</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="projects-holder-3">
+                            <div class="projects-holder">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 project-item mix nature">
+                                      <div class="thumb">
+                                            <div class="image">
+                                                <a href="{% static 'img/portfolio_big_item_01.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/portfolio_item_01.jpg' %}"></a>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 project-item mix animation">
+                                      <div class="thumb">
+                                        <div class="image">
+                                                <a href="{% static 'img/portfolio_big_item_02.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/portfolio_item_02.jpg' %}"></a>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 project-item mix branding">
+                                      <div class="thumb">
+                                            <div class="image">
+                                                <a href="{% static 'img/portfolio_big_item_03.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/portfolio_item_03.jpg' %}"></a>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 project-item mix nature">
+                                        <div class="thumb">
+                                            <div class="image">
+                                                <a href="{% static 'img/portfolio_big_item_04.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/portfolio_item_04.jpg' %}"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 project-item mix branding">
+                                      <div class="thumb">
+                                            <div class="image">
+                                                <a href="{% static 'img/portfolio_big_item_05.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/portfolio_item_05.jpg' %}"></a>
+                                            </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 project-item mix animation">
+                                        <div class="thumb">
+                                            <div class="image">
+                                                <a href="{% static 'img/portfolio_big_item_06.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/portfolio_item_06.jpg' %}"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 project-item mix branding">
+                                        <div class="thumb" id="sinathumb" hidden>
+                                            <div class="panel" style="width: 690px; ">
+                                              <div class="panel-heading">
+                                                  <h4>Sina  Rank</h4>
+                                                  <div class="row" id="pagetime">
+                                                      <div class="col-sm-2">
+                                                        <select data-placeholder="选择页码" class="chosen-select form-control" tabindex="2" id="selectpage">
+                                                        </select>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="panel-body" style="max-height: 385px; overflow: scroll;overflow-x:hidden">
+                                                  <div id="sinaRankList" class="list-group"></div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="col-md-12 col-sm-12 project-item mix graphic">
+                                                <div class="thumb" id="listbili" hidden>
+                                                    <section id="testimonial1">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-md-8 col-md-offset-1">
+                                                                    <div id="owl-bilibili" class="owl-carousel owl-theme">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+
+    <section id="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div id="owl-testimonials" class="owl-carousel owl-theme">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tabs-content" id="deploy">
+        <div class="container">
+            <div class="row">
+                <div class="wrapper">
+                    <div class="col-md-4">
+                        <div class="section-heading">
+                            <h4>Deploy</h4>
+                            <div class="line-dec"></div>
+                            <p>Here you can operate automated publishing and deployment.</p>
+                            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                                <li><a href="#pubAbout" class="active">About</a></li>
+                                <li><a id="devbtn" href="#dev">dev</a></li>
+                                <li><a id="uatbtn" href="#uat">uat</a></li>
+                                <li><a id="publistbtn" href="#publist">list</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <section id="first-tab-group" class="tabgroup">
+                            <div id="pubAbout">
+                                <img src="{% static 'img/blog_item_04.jpg' %}" alt="">
+                                <div class="text-content">
+                                    <h4>Automated Publishing And Deployment</h4>
+                                    <span><a href="#">Guo</a> / <a href="#">xudong </a> / <a href="#">production</a></span>
+                                    <p>But in the end, it's only a passing thing, this shadow. Even darkness must pass. A new day will come. And when the sun shines it will shine out the clearer. Those were the stories that stayed with you, that meant something. Even if you were too small to understand why. But I think, Mr. Frodo, I do understand. I know now.</p>
+                                </div>
+                            </div>
+                            <div id="dev" style="height: 500px ; overflow: scroll;overflow-x:hidden">
+                                <!--<img src="{% static 'img/blog_item_02.jpg' %}" alt="">-->
+                                <div class="text-content">
+                                    <h4>Dev List</h4>
+                                    <span><a href="#">Search </a> / <a href="#">for the module</a> / <a href="#">you need</a></span>
+                                    <input class="form-control form-focus" id="devmod" type="text" placeholder="please enter..." >
+                                    <p></p>
+                                    <div class="list-group">
+                                      <a href="" class="list-group-item">Enter the item you want to publish......</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="uat" style="height: 500px ; overflow: scroll;overflow-x:hidden">
+                                <!--<img src="{% static 'img/blog_item_03.jpg' %}" alt="">-->
+                                <div class="text-content">
+                                     <h4>Uat List</h4>
+                                    <span><a href="#">Search </a> / <a href="#">for the module</a> / <a href="#">you need</a></span>
+                                    <input class="form-control form-focus" id="uatmod" type="text" placeholder="please enter..." >
+                                    <p></p>
+                                    <div class="list-group">
+                                      <a href="" class="list-group-item">Enter the item you want to publish......</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="publist">
+                                <img src="{% static 'img/blog_item_03.jpg' %}" alt="">
+                                <footer style="height: 50px">
+                                    <div class="container" style="height: 50px">
+                                        <div class="connect-us">
+                                            <ul>
+                                                <li><a type="button" data-toggle="popover" data-placement="top" data-content="发布" onclick="evn()"><i class="fa fa-rocket"></i></a></li>
+                                                <li><a type="button" data-toggle="popover" data-placement="top" data-content="编译履历" onclick="compilepage()"><i class="fa fa-cog"></i></a></li>
+                                                <li><a type="button" data-toggle="popover" data-placement="top" data-content="EDAS控制台" onclick="window.open('http://edas.console.shgtuat.com/#/app');"><i class="fa fa-etsy"></i></a></li>
+                                                <li><a type="button" data-toggle="popover" data-placement="top" data-content="标准发布页面" onclick="pubpage()"><i class="fa fa-vcard"></i></a></li>
+                                                <li><a href="#" type="button" data-toggle="popover" data-placement="top" data-content="top" class="scroll-top"><i class="fa fa-home"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </footer>
+                                <div class="text-content col-md-4" id="listcontent" style="height: 248px">
+                                    <h4>Deploy<span><em> List</em></span></h4>
+                                    <p>无结果</p>
+                                </div>
+                                <div class="text-content col-md-8" id="timelist" style="height: 248px">
+                                    <h4><span><em> status</em></span></h4>
+                                    <!--<span><a href="#">Guo</a> / <a href="#">xudong </a> / <a href="#">production</a></span>-->
+                                    <table class="table table-striped table-hover">
+                                        <thead>
+                                        <tr>
+                                            <td style="max-width: 136px;"><span>实例名称</span></td>
+                                            <td><span>ip地址</span></td>
+                                            <td><span>cup/内存</span></td>
+                                            <td><span>实时状态</span></td>
+                                            <td><span>任务状态</span></td>
+                                        </tr>
+                                        </thead>
+                                        <tbody><tr><td><p>无结果</p></td></tr></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h4>Contact Us</h4>
+                        <div class="line-dec"></div>
+                        <p>Donec sit amet commodo arcu. Sed sit amet iaculis mi, vel fermentum nisi. Morbi dui enim, vestibulum non accumsan ac, tempor non nisl.</p>
+                        <div class="pop-button">
+                            <h4>Send us a message</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="pop">
+                        <span>✖</span>
+                        <form id="contact" action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                  </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="logo">
+                        <a href="#" class="scroll-top"><em>M</em>ydashboard</a>
+                        <p>Copyright &copy; 2017 guoxudong
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="location">
+                        <h4>Location</h4>
+                        <ul>
+                            <li>China, <br>Shanghai</li>
+                            <li>Baoshan, <br>Ouyeel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="contact-info">
+                        <h4>More Info</h4>
+                        <ul>
+                            <li><em>Phone</em>: 15235111699</li>
+                            <li><em>Email</em>: 88137956@qq.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="connect-us">
+                        <h4>Get Social with me</h4>
+                        <ul>
+                            <li><a type="button" data-toggle="popover" data-placement="top" data-content="88137956" title="WeChat"><i class="fa fa-wechat"></i></a></li>
+                            <li><a type="button" data-toggle="popover" data-placement="top" data-content="晒太阳的毛线团" title="weibo"><i class="fa fa-weibo"></i></a></li>
+                            <li><a type="button" data-toggle="popover" data-placement="top" data-content="88137956" title="QQ"><i class="fa fa-qq"></i></a></li>
+                            <li><a type="button" data-toggle="popover" data-placement="top" data-content="sunny0826" title="GitHub"><i class="fa fa-github"></i></a></li>
+                            <!--<li><a type="button" data-toggle="popover" data-placement="top" data-content="暂无" title="gitlab"><i class="fa fa-gitlab"></i></a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/vendor/jquery-1.11.2.min.js' %}"></script>
+    <!--<script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery-1.11.2.min.js' %}"><\/script>')</script>-->
+
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!--<link href="% static 'dist/lib/chosen/chosen.min.css' %}" rel="stylesheet">-->
+    <!--<script src="{% static 'dist/lib/chosen/chosen.min.js' %}"></script>-->
+    <!-- ZUI Javascript组件 -->
+    <script src="{% static 'dist/js/zui.min.js' %}"></script>
+    <!-- zui-dashboard组件 -->
+    <script src="{% static 'dist/lib/dashboard/zui.dashboard.min.js' %}"></script>
+    <!-- zui图表 -->
+    <script src="{% static 'dist/lib/chart/zui.chart.min.js' %}"></script>
+
+    <script type="text/javascript">
+    $('[data-toggle="popover"]').popover({
+        placement: 'top',
+        trigger:'hover'
+    });
+    $('select.chosen-select').on('change', function(e){
+        var num = $(this).val();
+        sinaRank(num);
+    });
+    /*查询新浪实时热搜列表*/
+    function sinaRank(num) {
+        $('#sinathumb').show();
+        data = {'num':num};
+        $.ajax({
+                type: 'GET',
+                url: '/sinaRankApi',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    var time = data[0].time.split('+')[0];
+                    var sumpage = data[0].sumpage;
+                    $('#pagetime >div#timetext').remove();
+                    $('#pagetime').append('<div class="col-sm-4 pull-right" id="timetext"><p>Get Time：'+time+'</p></div>');
+                    $('#selectpage >option').remove();
+                    $('#sinaRankList >a').remove();
+                    for (var i=1; i<=sumpage; i++){
+                        $('#selectpage').append('<option value="'+i+'">'+i+'</option>');
+                    }
+                    for (d in data){
+                            $('#sinaRankList').prepend('<a href="http://s.weibo.com'+data[d].url+'" class="list-group-item" target="view_window"><span class="label label-badge label-info">'+data[d].rank+'</span>  '+data[d].name+'<span class="pull-right label label-badge label-danger">'+data[d].rankNum+'</span></a>')
+                    }
+                },
+                error: function (xhr, type) {
+                    console.log('正式获取错误')
+                }
+                });
+    }
+    /*bilibili新番时间表*/
+    function bilibili() {
+        $('#listbili').show();
+        if($('#owl-bilibili>div')!=""){
+            $('#owl-bilibili>div').remove();
+        }
+        data = {};
+        var owlbilibili = $("#owl-bilibili");
+
+        $.ajax({
+            type: 'GET',
+            url: '/bilibiliListApi',
+            data: data,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                for (i in data) {
+                    var list = data[i].seasons;
+                    var con = '';
+                    var week = '';
+                    if(data[i].day_of_week==6){
+                        week = '六';
+                    }else if(data[i].day_of_week==7){
+                        week = '日';
+                    }else {
+                        week = data[i].day_of_week;
+                    }
+                    for (d in list){
+                        con += '<div class="col-sm-4">\
+                        <a href="'+list[d].square_cover+'" data-lightbox="image-1">\
+                        <img width="100px" height="100px" src="'+list[d].square_cover+'"></a></div>\
+                        <div class="col-sm-8">\
+                        <h5>'+list[d].title+'</h5>\
+                        <span class="label label-badge label-danger">'+list[d].pub_index+'</span>\
+                        <p>更新时间：'+list[d].pub_time+'</p><hr></div>';
+                    }
+                    var content1 = '<div class="row" style="margin-top: 50px"><div class="scrollbar-hover" style="max-height: 550px; overflow-x:hidden;overflow-y:auto;"><span class="lead" >' + data[i].date + '   周' + week + '</span>'+con+'</div></div>';
+                    owlbilibili.data('owlCarousel').addItem(content1);
+                }
+            },
+            error: function (xhr, type) {
+                console.log('正式获取错误')
+            }
+        });
+    }
+    /*发布时间列表*/
+    function test(data) {
+        var appid = data.context.id;
+        window.modename = data.context.text;
+        var module = data.attr("value");
+        window.golmodule = module;
+//        alert(data.context.text);
+        var data = {modules:module,appId:appid};
+        $.ajax({
+                type: 'GET',
+                url: '/timelistapi',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+                    //console.log(data);
+                    $('#listcontent >p').remove();
+                    if (data==""){
+                        $('#listcontent').append('<p>无结果</p>')
+                    }else {
+                        for (d in data){
+                            if (d == 0){
+                                $('#listcontent').append('<a class="list-group-item text-center"><span class="label label-badge label-danger pull-left" style="color: #FFFFFF">new</span>'+data[d]+'</a>')
+                            }else {
+                                $('#listcontent').append('<a class="list-group-item text-center">'+data[d]+'</a>')
+                            }
+                        }
+                    }
+                },
+                error: function (xhr, type) {
+                    console.log('正式获取错误')
+                }
+                });
+        $.ajax({
+                type: 'GET',
+                url: '/deploylistapi',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    $('#timelist >table>tbody>tr').remove();
+                    if (data==""){
+                        $('#timelist>table>tbody').append('<tr><td><p>无结果</p></td></tr>')
+                    }else {
+                        for (d in data){
+                            var status = data[d].states;
+                            if(status=='DEPLOYING'){
+                                status = '部署中';
+                            }else if(status=='RUNNING'){
+                                status = '运行中';
+                            }else if (status=='STOPPED'){
+                                status = '容器退出';
+                            }else if (status=='APP_OFF'){
+                                status = '应用异常';
+                            }else if (status=='APP_OFF'){
+                                status = '应用启动中...';
+                            }
+                            var run = data[d].running;
+                            if (run){
+                                run = '<p class="text-success">正常</p>'
+
+                            }else {
+                                run = '<p class="text-danger">异常</p>'
+                            }
+                            $('#timelist>table>tbody').append('<tr>\
+                                            <td><p>'+data[d].name+'</p></td>\
+                                            <td><p>'+data[d].ip+'</p></td>\
+                                            <td><p>'+data[d].cpu+'核/'+data[d].mem+' MB</p></td>\
+                                            <td>'+run+'</td>\
+                                            <td><p>'+status+'</p></td>\
+                                        </tr>')
+                        }
+                    }
+
+                },
+                error: function (xhr, type) {
+                    console.log('正式获取错误')
+                }
+                });
+        setInterval(checkurl,5000);
+        $('#publistbtn').click();
+        function checkurl(){
+           $.ajax({
+                type: 'GET',
+                url: '/checkurlapi',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                    for (d in data){
+                        if(data[d].state!='RUNNING'){
+                            var index = Number(d)+1;
+                            var strselect = '#timelist >table>tbody>:nth-child('+index+')>td:nth-child(5)>p';
+                            $(strselect).remove();
+                            var status = data[d].state;
+                            if(status=='DEPLOYING'){
+                                $(strselect).append('<p>部署中</p>');
+                            }else if (status=='STOPPED'){
+                                $(strselect).append('<p>容器退出</p>');
+                            }else if(status=='RUNNING'){
+                                $(strselect).append('<p>运行中</p>');
+                            }else if (status=='APP_OFF'){
+                                $(strselect).append('<p>应用异常</p>');
+                            }else if (status=='APP_OFF'){
+                                $(strselect).append('<p>应用启动中...</p>');
+                            }
+                        }
+                    }
+                },
+                error: function (xhr, type) {
+                    console.log('正式获取错误')
+                }
+                });
+        }
+    }
+    /*当前选择环境判定（dev、uat）*/
+    function evn() {
+        if(typeof(golmodule)!="undefined"){
+//            alert(golmodule);
+//            alert(modename);
+            var data = {modules:modename,evn:golmodule};
+            $.ajax({
+                type: 'GET',
+                url: '/deployapi',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (xhr, type) {
+                    console.log('正式获取错误')
+                }
+                });
+        }else {
+            alert('请选择环境');
+        }
+    }
+    /*打开编译履历页面*/
+    function compilepage() {
+        if(typeof(golmodule)!="undefined"){
+            if(golmodule=='dev'){
+                window.open("http://10.70.64.48:8080/xservices-deploy/versionHistory/toBuild");
+            }else {
+                window.open("http://10.70.95.102:8080/xservices-deploy/versionHistory/toBuild");
+            }
+        }else {
+            alert('请选择环境');
+        }
+    }
+    /*打开发布页面*/
+    function pubpage() {
+        if(typeof(golmodule)!="undefined"){
+            if(golmodule=='dev'){
+                window.open("http://10.70.64.48:8080/xservices-deploy/standardRelease/toStandardRelease");
+            }else {
+                window.open("http://10.70.95.102:8080/xservices-deploy/standardRelease/toStandardRelease");
+            }
+        }else {
+            alert('请选择环境');
+        }
+    }
+    $(document).ready(function() {
+        /*var owlbilibili = $("#owl-bilibili");
+        var content1 = '<p>1</p>';
+        owlbilibili.data('owlCarousel').addItem(content1);*/
+        $('#publistbtn').hide();
+        /************** 轮播插件Owl Carousel *********************/
+        var owl = $("#owl-testimonials");
+        $.ajax({
+            type: 'GET',
+            url: '/ticketsInfoapi',
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+//                console.log(data);
+                for(i in data){
+                    var content = '\
+                        <div class="item" id="itemfirst">\
+                            <div class="testimonials-item">\
+                                <p>“'+data[i].nameNoHtml+' ”</p>\
+                                <h4>场馆：'+data[i].venue+'</h4>\
+                                <span>'+data[i].actors+'</span><br>\
+                                <span>时间：'+data[i].showtime+'</span><br>\
+                                <span>票价：'+data[i].pricestr+'</span>\
+                            </div>\
+                        ';
+                owl.data('owlCarousel').addItem(content);
+                }
+            },
+            error: function (xhr, type) {
+                console.log('获取错误')
+            }
+        });
+
+        /************** 自动化发布部署信息 *********************/
+        $('#devmod').bind('keydown',function(event){
+            if(event.keyCode == "13") {
+//                alert($("#devmod").val());
+                var deployName = $("#devmod").val();
+                var data = {modules:'dev',deployName:deployName};
+                $.ajax({
+                type: 'GET',
+                url: '/searchapi',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+//                    console.log(data);
+                    $('#dev > div >div>a').remove();
+                    if (data==""){
+                        $('#dev > div >div').append('<a class="list-group-item">无结果</a>')
+                    }else {
+                        for (d in data){
+                            $('#dev > div >div').append('<a onclick="test($(this))" id="'+data[d].appId+'" value="'+data[d].owner+'"class="list-group-item">'+data[d].appname+'</a>')
+                        }
+                    }
+                    $("#devmod").val("");
+                },
+                error: function (xhr, type) {
+                    console.log('正式获取错误')
+                }
+                });
+            }
+        });
+        $('#uatmod').bind('keydown',function(event){
+            if(event.keyCode == "13") {
+//                alert($("#devmod").val());
+                var deployName = $("#uatmod").val();
+                var data = {modules:'uat',deployName:deployName};
+                $.ajax({
+                type: 'GET',
+                url: '/searchapi',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+//                    console.log(data);
+                    $('#uat > div >div>a').remove();
+                    if (data==""){
+                        $('#uat > div >div').append('<a class="list-group-item">无结果</a>')
+                    }else {
+                        for (d in data) {
+                            $('#uat > div >div').append('<a onclick="test($(this))" id="' + data[d].appId + '" value="' + data[d].owner + '"class="list-group-item">' + data[d].appname + '</a>')
+                        }
+                    }
+                    $("#uatmod").val("");
+                },
+                error: function (xhr, type) {
+                    console.log('正式获取错误')
+                }
+                });
+            }
+        });
+        // navigation click actions
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        if(speed==750){
+            /*$.get("/ticketsInfoapi", function(data,status){     //请求 "test.php" 并提醒请求的结果：
+                alert(status);
+                console.log("Data: " + data);
+            });*/
+        }
+        var offSet = 50;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>
