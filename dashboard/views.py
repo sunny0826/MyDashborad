@@ -8,7 +8,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.decorators.cache import cache_page
 
-from MyDashboard import testdb, BiliBili
+from MyDashboard import testdb, BiliBili, weather
 from MyDashboard.EDAS import searchedas, nodelist, nodeinfo, edasinfo
 from MyDashboard.dos import openfile1
 from MyDashboard.ticketsInfo import ticketsInfo
@@ -84,3 +84,11 @@ def bilibiliListApi(request):
         bilibiliList = BiliBili.bilibililist().get('result')
         bilibiliList = json.dumps(bilibiliList)
     return HttpResponse(bilibiliList, content_type='application/json; charset=utf-8')
+
+#天气信息
+@cache_page(60 * 15)
+def weatherInfoApi(request):
+    if request.method == 'GET':
+        weatherinfo = weather.weatherInfo()
+        weatherinfo = json.dumps(weatherinfo)
+    return HttpResponse(weatherinfo, content_type='application/json; charset=utf-8')

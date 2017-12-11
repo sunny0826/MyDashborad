@@ -142,7 +142,7 @@
                             <p>Some Useful Information.</p>
                             <div class="filter-categories">
                                 <ul class="project-filter">
-                                    <li class="filter" data-filter="all"><span>About</span></li>
+                                    <li class="filter" data-filter="all" onclick="removeOther()"><span>About</span></li>
                                     <li class="filter" data-filter="branding" onclick="sinaRank(1)"><span>sina  Rank</span></li>
                                     <li class="filter" data-filter="graphic" onclick="bilibili()"><span>BiliBili List</span></li>
                                     <li class="filter" data-filter="nature"><span>Nature</span></li>
@@ -455,6 +455,15 @@
     <script src="{% static 'dist/lib/chart/zui.chart.min.js' %}"></script>
 
     <script type="text/javascript">
+    /*点击about的手删除不需要显示的元素*/
+    function removeOther() {
+        if($('#sinathumb')!=""){
+            $('#sinathumb').hide();
+        }
+        if($('#owl-bilibili>div')!=""){
+            $('#owl-bilibili>div').remove();
+        }
+    }
     $('[data-toggle="popover"]').popover({
         placement: 'top',
         trigger:'hover'

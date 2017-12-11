@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^sinaRankApi/$',views.sinaRankApi),
     url(r'^finddb', testdb.sinaRankDB),
     url(r'^bilibiliListApi', views.bilibiliListApi),
+    url(r'^weatherInfoApi', views.weatherInfoApi)
 ]
