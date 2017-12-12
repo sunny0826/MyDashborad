@@ -2,16 +2,15 @@
 from __future__ import unicode_literals
 
 import json
-
 from django.http import HttpResponse
 from django.shortcuts import render
 # Create your views here.
 from django.views.decorators.cache import cache_page
 
-from MyDashboard import testdb, BiliBili, weather
-from MyDashboard.EDAS import searchedas, nodelist, nodeinfo, edasinfo
-from MyDashboard.dos import openfile1
-from MyDashboard.ticketsInfo import ticketsInfo
+import testdb, BiliBili, weatherInfo
+from EDAS import searchedas, nodelist, nodeinfo, edasinfo
+from dos import openfile1
+from ticketsInfo import ticketsInfo
 
 # @cache_page(60 * 15)
 def index(request):
@@ -89,6 +88,6 @@ def bilibiliListApi(request):
 @cache_page(60 * 15)
 def weatherInfoApi(request):
     if request.method == 'GET':
-        weatherinfo = weather.weatherInfo()
+        weatherinfo = weatherInfo.weatherInfo()
         weatherinfo = json.dumps(weatherinfo)
     return HttpResponse(weatherinfo, content_type='application/json; charset=utf-8')

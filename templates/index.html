@@ -43,7 +43,7 @@
                 <div id="main-nav" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#" class="scroll-top">Home</a></li>
-                        <li><a href="#" class="scroll-link" data-id="about">Disk&RAM</a></li>
+                        <li><a href="#" class="scroll-link" data-id="about">Weather</a></li>
                         <li><a href="#" class="scroll-link" data-id="portfolio">BasicInfo</a></li>
                         <li><a href="#" class="scroll-link" data-id="deploy">Deploy</a></li>
                         <li><a href="#" class="scroll-link" data-id="contact-us">CONTACT me</a></li>
@@ -73,63 +73,13 @@
 
     <section id="about" class="page-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item">
-                        <div class="">
-                            <img src="{% static 'img/Control_Panel.ico' %}" alt="">
-                        </div>
-                        <h4>Disk Information</h4>
-                        <div class="line-dec"></div>
-                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item">
-                        <div class="">
-                            <img src="{% static 'img/C_drive.ico' %}" alt="">
-                        </div>
-                        <h4>C Drive Information</h4>
-                        <div class="line-dec"></div>
-                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item">
-                        <div class="">
-                            <img src="{% static 'img/D_drive.ico' %}" alt="">
-                        </div>
-                        <h4>D drive information</h4>
-                        <div class="line-dec"></div>
-                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item">
-                        <div class="">
-                            <img src="{% static 'img/Rocketdock.ico' %}" alt="">
-                        </div>
-                        <h4>Memory Information</h4>
-                        <div class="line-dec"></div>
-                        <p>Integer hendrerit vehicula mauris, sed pellentesque sem facilisis at. Aliquam vel arcu metus. Nam sem lectus, mattis non tellus et, tincidunt condimentum eros.</p>
-                        <div class="primary-blue-button">
-                            <a href="#" class="scroll-link" data-id="portfolio">Continue Reading</a>
-                        </div>
-                    </div>
+            <div class="row" id="weatherNext">
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="service-item" id="weatherNow"></div>
                 </div>
             </div>
         </div>
     </section>
-    <!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>-->
 
     <section id="portfolio">
         <div class="content-wrapper">
@@ -444,7 +394,6 @@
     <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/plugins.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-
     <!--<link href="% static 'dist/lib/chosen/chosen.min.css' %}" rel="stylesheet">-->
     <!--<script src="{% static 'dist/lib/chosen/chosen.min.js' %}"></script>-->
     <!-- ZUI Javascript组件 -->
@@ -455,6 +404,55 @@
     <script src="{% static 'dist/lib/chart/zui.chart.min.js' %}"></script>
 
     <script type="text/javascript">
+    /*天气查询*/
+    $.ajax({
+        type: 'GET',
+        url: '/weatherInfoApi',
+        data: {},
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+            var weather = data.weather[0];
+            var icon = data.weather[0].now.text;
+            if (icon=='晴'){
+                icon = "/static/img/weather/Sun.png";
+            }else if (icon=='多云'){
+                icon = "/static/img/weather/Cloud.png";
+            }else if (icon=='阴'){
+                icon = "/static/img/weather/Cloud.png";
+            }else if (icon.indexOf('雨'>=0)){
+                icon = "/static/img/weather/Rain.png";
+            }else if (icon.indexOf('雪'>=0)){
+                icon = "/static/img/weather/Snow.png";
+            }
+            $('#weatherNow').html('<div class="" style="margin-top: -100px;">\
+                <img src='+icon+' alt="" style="position:relative; top:50px; ">\
+                </div>\
+                <h4>'+weather.last_update.split('T')[0]+'  <span class="label label-badge label-info">'+weather.last_update.split('T')[1].split('+')[0]+'</span></h4>\
+                <div class="line-dec"></div>\
+                <p>温度：'+weather.now.temperature+'℃</p>\
+                <p>体感温度：'+weather.now.feels_like+'℃</p>\
+                <p>湿度：'+weather.now.humidity+'</p>\
+                <p>风向：'+weather.now.wind_direction+'</p>\
+                ');
+            var info = weather.future;
+            for (i in info){
+                $('#weatherNext').append('<div class="col-md-1 col-sm-6 col-xs-12">\
+                    <div class="service-item">\
+                        <h4>'+info[i].date.split('7-')[1]+'</h4>\
+                        <p class="label label-badge label-danger">'+info[i].day+'</p>\
+                        <p>'+info[i].text+'</p>\
+                        <div class="line-dec"></div>\
+                        <p>温度：'+info[i].low+'℃-'+info[i].high+'℃</p>\
+                        <p>'+info[i].wind+'</p>\
+                    </div>\
+                </div>');
+            }
+        },
+        error: function (xhr, type) {
+            console.log('正式获取错误')
+        }
+    });
     /*点击about的手删除不需要显示的元素*/
     function removeOther() {
         if($('#sinathumb')!=""){
